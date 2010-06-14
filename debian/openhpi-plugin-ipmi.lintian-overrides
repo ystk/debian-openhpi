@@ -1,0 +1,8 @@
+# Some generated binary packages include libraries, and therefore need the
+# call to ldconfig.  Others don't.  Can I eliminate the ldconfig calls on
+# a package-by-package basis?
+openhpi-plugin-ipmi binary: postinst-has-useless-call-to-ldconfig
+openhpi-plugin-ipmi binary: postrm-has-useless-call-to-ldconfig
+# Another rpath error, needs to be fully understood, but the root may be the
+# upstream plug-in architecture.  These are listed in the TODO file.
+openhpi-plugin-ipmi binary: binary-or-shlib-defines-rpath

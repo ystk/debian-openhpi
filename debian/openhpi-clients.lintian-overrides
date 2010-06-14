@@ -1,0 +1,4 @@
+# It's a known problem that there are missing manpages for a number of example
+# client programs that are shipped with OpenHPI.  I am working with upstream
+# to write these, and they will eventually be a part of the package.
+#openhpi-clients binary: binary-without-manpage

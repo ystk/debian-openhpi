@@ -1,0 +1,5 @@
+# Some generated binary packages include libraries, and therefore need the
+# call to ldconfig.  Others don't.  Can I eliminate the ldconfig calls on
+# a package-by-package basis?
+openhpi-plugin-oa-soap binary: postinst-has-useless-call-to-ldconfig
+openhpi-plugin-oa-soap binary: postrm-has-useless-call-to-ldconfig

@@ -1,0 +1,180 @@
+Source: openhpi
+Section: admin
+Priority: optional
+Maintainer: Bryan Sutula <Bryan.Sutula@hp.com>
+Uploaders: Khalid Aziz <khalid@debian.org>
+Homepage: http://openhpi.org
+Build-Depends: debhelper (>= 6.0.7~), autotools-dev, autoconf (>= 2.57), automake1.9, uuid-dev, libglib2.0-dev (>= 2.2), pkg-config, libltdl-dev, openipmi (>= 2.0.7), libopenipmi-dev (>=2.0.7), libsnmp-dev, libssl-dev, libsysfs-dev (>= 0.3), libncurses5-dev, libxml2-dev
+Standards-Version: 3.8.3
+
+Package: libopenhpi2
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: openhpid (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI libraries (runtime and support files)
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains the runtime libraries and support files needed by
+ an application program that uses OpenHPI.  As a packaging convenience,
+ this base library also includes the watchdog and simulator plugin
+ modules.
+
+Package: libopenhpi-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version}), libopenipmi0 (>=2.0.7), openipmi (>=2.0.7)
+Description: OpenHPI libraries (development files)
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains the development libraries and include files needed
+ to build an application program that uses OpenHPI.
+
+Package: openhpid
+Section: admin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version}), lsb-base
+Description: OpenHPI daemon, supports gathering of manageability information
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains the OpenHPI daemon.  This process gathers
+ information from managed hardware and systems, making this available
+ to OpenHPI-based applications.
+
+
+Package: openhpi-clients
+Section: admin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Description: OpenHPI example client programs
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains the example client programs supplied as part
+ of OpenHPI.
+
+Package: openhpi-plugin-ilo2-ribcl
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for HP's ProLiant rackmount servers
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that provides hardware information
+ from many HP ProLiant rackmount servers, accessing this information
+ using RIBCL to an iLO2, over a LAN.
+
+Package: openhpi-plugin-ipmi
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version}), libopenipmi0 (>=2.0.7), openipmi (>=2.0.7)
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for OpenIPMI
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that accesses hardware information
+ through the OpenIPMI library.
+
+Package: openhpi-plugin-ipmidirect
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for direct IPMI over LAN (RMCP) or SMI
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that accesses hardware information
+ with direct IPMI commands over a LAN (RMCP) or through the local SMI.
+
+Package: openhpi-plugin-oa-soap
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for HP's BladeSystem c-Class
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that provides hardware information
+ from HP BladeSystem c-Class servers, accessing this information using
+ SOAP/XML to an Onboard Administrator module, over a LAN.
+
+Package: openhpi-plugin-snmp-bc
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for IBM's BladeCenter or RSA over SNMP
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that accesses IBM BladeCenter
+ and RSA-enabled systems hardware information through SNMP.
+
+Package: openhpi-plugin-sysfs
+Section: libs
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for the sysfs filesystem
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that accesses hardware information
+ presented through the sysfs filesystem.
+
+Package: openhpi
+Section: admin
+Priority: extra
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi-dev (>= ${source:Version}), openhpid, openhpi-clients, openhpi-plugin-ilo2-ribcl, openhpi-plugin-ipmi, openhpi-plugin-ipmidirect, openhpi-plugin-oa-soap, openhpi-plugin-snmp-bc, openhpi-plugin-sysfs
+Description: SAF's HPI: Abstracted interface for managing computer hardware
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface (HPI) specification.  (See http://www.saforum.org)
+ As such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ HPI provides an abstracted interface for managing computer hardware,
+ typically for chassis and rack based servers. HPI includes resource
+ modeling; access to and control over sensor, control, watchdog, and
+ inventory data associated with resources; abstracted System Event Log
+ interfaces; hardware events and alerts; and a managed hotswap interface.
+ .
+ This package is a metapackage which installs all of the OpenHPI
+ components.
