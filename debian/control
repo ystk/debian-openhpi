@@ -146,7 +146,7 @@ Description: OpenHPI plugin module for IBM's BladeCenter or RSA over SNMP
 Package: openhpi-plugin-sysfs
 Section: libs
 Priority: extra
-Architecture: any
+Architecture: linux-any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
 Conflicts: libopenhpi
 Replaces: libopenhpi
@@ -159,11 +159,27 @@ Description: OpenHPI plugin module for the sysfs filesystem
  This package contains a plugin module that accesses hardware information
  presented through the sysfs filesystem.
 
+Package: openhpi-plugin-watchdog
+Section: libs
+Priority: optional
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi2 (= ${binary:Version})
+Conflicts: libopenhpi
+Replaces: libopenhpi
+Description: OpenHPI plugin module for the Linux watchdog interface
+ OpenHPI is an implementation of the Service Availability Forum's Hardware
+ Platform Interface specification.  (See http://www.saforum.org)  As
+ such, OpenHPI facilitates the development of computer manageability
+ applications which are not tied to a single hardware vendor's products.
+ .
+ This package contains a plugin module that uses the Linux watchdog API.
+
 Package: openhpi
 Section: admin
 Priority: extra
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi-dev (>= ${source:Version}), openhpid, openhpi-clients, openhpi-plugin-ilo2-ribcl, openhpi-plugin-ipmi, openhpi-plugin-ipmidirect, openhpi-plugin-oa-soap, openhpi-plugin-snmp-bc, openhpi-plugin-sysfs
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenhpi-dev (>= ${source:Version}), openhpid, openhpi-clients, openhpi-plugin-ilo2-ribcl, openhpi-plugin-ipmi, openhpi-plugin-ipmidirect, openhpi-plugin-oa-soap, openhpi-plugin-snmp-bc
+Recommends: openhpi-plugin-sysfs, openhpi-plugin-watchdog
 Description: SAF's HPI: Abstracted interface for managing computer hardware
  OpenHPI is an implementation of the Service Availability Forum's Hardware
  Platform Interface (HPI) specification.  (See http://www.saforum.org)

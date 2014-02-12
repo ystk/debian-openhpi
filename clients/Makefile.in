@@ -61,40 +61,51 @@ am__DEPENDENCIES_1 = $(top_builddir)/openhpid/libopenhpi.la
 hpialarms_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_hpiel_OBJECTS = hpiel.$(OBJEXT) $(am__objects_1)
 hpiel_OBJECTS = $(am_hpiel_OBJECTS)
-hpiel_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpiel_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpievents_OBJECTS = hpievents.$(OBJEXT) $(am__objects_1)
 hpievents_OBJECTS = $(am_hpievents_OBJECTS)
-hpievents_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpievents_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpifan_OBJECTS = hpifan.$(OBJEXT) $(am__objects_1)
 hpifan_OBJECTS = $(am_hpifan_OBJECTS)
-hpifan_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpifan_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpiinv_OBJECTS = hpiinv.$(OBJEXT) $(am__objects_1)
 hpiinv_OBJECTS = $(am_hpiinv_OBJECTS)
-hpiinv_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpiinv_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpionIBMblade_OBJECTS = hpionIBMblade.$(OBJEXT) $(am__objects_1)
 hpionIBMblade_OBJECTS = $(am_hpionIBMblade_OBJECTS)
-hpionIBMblade_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpionIBMblade_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpipower_OBJECTS = hpipower.$(OBJEXT) $(am__objects_1)
 hpipower_OBJECTS = $(am_hpipower_OBJECTS)
-hpipower_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpipower_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpireset_OBJECTS = hpireset.$(OBJEXT) $(am__objects_1)
 hpireset_OBJECTS = $(am_hpireset_OBJECTS)
 hpireset_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_hpisensor_OBJECTS = hpisensor.$(OBJEXT) $(am__objects_1)
 hpisensor_OBJECTS = $(am_hpisensor_OBJECTS)
-hpisensor_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpisensor_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpisettime_OBJECTS = hpisettime.$(OBJEXT) $(am__objects_1)
 hpisettime_OBJECTS = $(am_hpisettime_OBJECTS)
-hpisettime_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpisettime_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpithres_OBJECTS = hpithres.$(OBJEXT) $(am__objects_1)
 hpithres_OBJECTS = $(am_hpithres_OBJECTS)
-hpithres_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpithres_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpitop_OBJECTS = hpitop.$(OBJEXT) $(am__objects_1)
 hpitop_OBJECTS = $(am_hpitop_OBJECTS)
-hpitop_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpitop_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpitree_OBJECTS = hpitree.$(OBJEXT) $(am__objects_1)
 hpitree_OBJECTS = $(am_hpitree_OBJECTS)
-hpitree_DEPENDENCIES = $(am__DEPENDENCIES_1)
+hpitree_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/utils/libopenhpiutils.la
 am_hpiwdt_OBJECTS = hpiwdt.$(OBJEXT) $(am__objects_1)
 hpiwdt_OBJECTS = $(am_hpiwdt_OBJECTS)
 hpiwdt_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -323,31 +334,31 @@ include_HEADERS =
 hpialarms_SOURCES = hpialarms.c $(CLIENTS_SRC)
 hpialarms_LDADD = $(COMMONLIBS) 
 hpithres_SOURCES = hpithres.c $(CLIENTS_SRC)
-hpithres_LDADD = $(COMMONLIBS)
+hpithres_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpifan_SOURCES = hpifan.c $(CLIENTS_SRC)
-hpifan_LDADD = $(COMMONLIBS)
+hpifan_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpitop_SOURCES = hpitop.c $(CLIENTS_SRC)
-hpitop_LDADD = $(COMMONLIBS)
+hpitop_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpireset_SOURCES = hpireset.c $(CLIENTS_SRC)
 hpireset_LDADD = $(COMMONLIBS)
 hpiel_SOURCES = hpiel.c $(CLIENTS_SRC)
-hpiel_LDADD = $(COMMONLIBS)
+hpiel_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpisensor_SOURCES = hpisensor.c $(CLIENTS_SRC)
-hpisensor_LDADD = $(COMMONLIBS)
+hpisensor_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpiwdt_SOURCES = hpiwdt.c $(CLIENTS_SRC)
 hpiwdt_LDADD = $(COMMONLIBS)
 hpiinv_SOURCES = hpiinv.c $(CLIENTS_SRC)
-hpiinv_LDADD = $(COMMONLIBS)
+hpiinv_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpisettime_SOURCES = hpisettime.c $(CLIENTS_SRC)
-hpisettime_LDADD = $(COMMONLIBS)
+hpisettime_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpievents_SOURCES = hpievents.c $(CLIENTS_SRC)
-hpievents_LDADD = $(COMMONLIBS)
+hpievents_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpipower_SOURCES = hpipower.c $(CLIENTS_SRC)
-hpipower_LDADD = $(COMMONLIBS)
+hpipower_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpitree_SOURCES = hpitree.c $(CLIENTS_SRC)
-hpitree_LDADD = $(COMMONLIBS)
+hpitree_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 hpionIBMblade_SOURCES = hpionIBMblade.c $(CLIENTS_SRC)
-hpionIBMblade_LDADD = $(COMMONLIBS)
+hpionIBMblade_LDADD = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 all: all-am
 
 .SUFFIXES:

@@ -1,3 +1,30 @@
+openhpi (2.14.1-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Split off Linux-specific plugins to fix FTBFS on GNU/kFreeBSD.
+    (Closes: #650816)
+
+ -- Robert Millan <rmh@debian.org>  Fri, 27 Apr 2012 23:33:49 +0200
+
+openhpi (2.14.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Upload openhpi (2.14.1-1ubuntu1) except debian/control changes
+    to Debian sid (Closes: #565105) (Closes: #555866)
+  * Avoid including autotools-dev copies of config.{guess,sub} in
+    the debian changes (*.diff.gz)
+
+ -- Thorsten Glaser <tg@mirbsd.de>  Mon, 18 Jul 2011 22:23:29 +0200
+
+openhpi (2.14.1-1ubuntu1) natty; urgency=low
+
+  * plugins/ipmidirect/ipmi_mc_vendor.cpp: Fix FTBFS with gcc 4.5.
+    Taken from upstream. (LP: #687986)
+  * clients/Makefile.{am,in}: Add missing libraries otherwise it FTBFS.
+    Related to linker '--as-needed' change.
+
+ -- Andres Rodriguez <andreserl@ubuntu.com>  Fri, 07 Jan 2011 16:17:28 -0500
+
 openhpi (2.14.1-1) unstable; urgency=low
 
   * Updated to upstream 2.14.1 version; differences listed at

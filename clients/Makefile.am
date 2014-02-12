@@ -33,43 +33,43 @@ hpialarms_SOURCES   = hpialarms.c $(CLIENTS_SRC)
 hpialarms_LDADD     = $(COMMONLIBS) 
 
 hpithres_SOURCES        = hpithres.c $(CLIENTS_SRC)
-hpithres_LDADD          = $(COMMONLIBS)
+hpithres_LDADD          = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpifan_SOURCES          = hpifan.c $(CLIENTS_SRC)
-hpifan_LDADD            = $(COMMONLIBS)
+hpifan_LDADD            = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpitop_SOURCES          = hpitop.c $(CLIENTS_SRC)
-hpitop_LDADD            = $(COMMONLIBS)
+hpitop_LDADD            = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpireset_SOURCES        = hpireset.c $(CLIENTS_SRC)
 hpireset_LDADD          = $(COMMONLIBS)
 
 hpiel_SOURCES           = hpiel.c $(CLIENTS_SRC)
-hpiel_LDADD             = $(COMMONLIBS)
+hpiel_LDADD             = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpisensor_SOURCES       = hpisensor.c $(CLIENTS_SRC)
-hpisensor_LDADD         = $(COMMONLIBS)
+hpisensor_LDADD         = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpiwdt_SOURCES          = hpiwdt.c $(CLIENTS_SRC)
 hpiwdt_LDADD            = $(COMMONLIBS)
 
 hpiinv_SOURCES          = hpiinv.c $(CLIENTS_SRC)
-hpiinv_LDADD            = $(COMMONLIBS)
+hpiinv_LDADD            = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpisettime_SOURCES      = hpisettime.c $(CLIENTS_SRC)
-hpisettime_LDADD        = $(COMMONLIBS)
+hpisettime_LDADD        = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpievents_SOURCES      = hpievents.c $(CLIENTS_SRC)
-hpievents_LDADD        = $(COMMONLIBS)
+hpievents_LDADD        = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpipower_SOURCES      = hpipower.c $(CLIENTS_SRC)
-hpipower_LDADD        = $(COMMONLIBS)
+hpipower_LDADD        = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpitree_SOURCES      = hpitree.c $(CLIENTS_SRC)
-hpitree_LDADD        = $(COMMONLIBS)
+hpitree_LDADD        = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 hpionIBMblade_SOURCES      = hpionIBMblade.c $(CLIENTS_SRC)
-hpionIBMblade_LDADD        = $(COMMONLIBS)
+hpionIBMblade_LDADD        = $(COMMONLIBS) $(top_builddir)/utils/libopenhpiutils.la
 
 clean-local:
 	rm -f *~ *.o
