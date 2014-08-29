@@ -20,7 +20,7 @@ int lockcount = 0;
 
 /* multi-threading support, use Posix mutex for data access */
 /* initialize mutex used for data locking */
-#include <glib/gthread.h>
+#include <glib.h>
 
 GStaticRecMutex oh_main_lock = G_STATIC_REC_MUTEX_INIT;
 

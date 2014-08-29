@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Bryan Sutula <Bryan.Sutula@hp.com>
 Uploaders: Khalid Aziz <khalid@debian.org>
 Homepage: http://openhpi.org
-Build-Depends: debhelper (>= 6.0.7~), autotools-dev, autoconf (>= 2.57), automake1.9, uuid-dev, libglib2.0-dev (>= 2.2), pkg-config, libltdl-dev, openipmi (>= 2.0.7), libopenipmi-dev (>=2.0.7), libsnmp-dev, libssl-dev, libsysfs-dev (>= 0.3), libncurses5-dev, libxml2-dev
+Build-Depends: debhelper (>= 6.0.7~), autotools-dev, uuid-dev, libglib2.0-dev (>= 2.2), pkg-config, libltdl-dev, openipmi (>= 2.0.7), libopenipmi-dev (>=2.0.7), libsnmp-dev, libssl-dev, libsysfs-dev (>= 0.3), libncurses5-dev, libxml2-dev
 Standards-Version: 3.8.3
 
 Package: libopenhpi2
